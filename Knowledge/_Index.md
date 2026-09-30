@@ -13,6 +13,7 @@
 | 2 | AI-Pentest-Agent (LLM security-assessment orchestration) | [`AiPentestAgent/Study.md`](AiPentestAgent/Study.md) | `ACC/Reference/Upstream.AiPentestAgent.Rules.md` (AIPA-R01..R16) | 2026-09-30 |
 | 3 | PentestGPT (LLM pentest-guidance prototype, USENIX 2024) | [`PentestGpt/Study.md`](PentestGpt/Study.md) | `ACC/Reference/Upstream.PentestGpt.Rules.md` (PGPT-R01..R18) | 2026-09-30 |
 | 4 | JailbreakBench (LLM jailbreak robustness benchmark, NeurIPS 2024) | [`JailbreakBench/Study.md`](JailbreakBench/Study.md) | `ACC/Reference/Upstream.JailbreakBench.Rules.md` (JBB-R01..R19) | 2026-09-30 |
+| 5 | CAI / Cybersecurity AI (agentic-security framework, archived; MIT + research-only additions) | [`Cai/Study.md`](Cai/Study.md) | `ACC/Reference/Upstream.Cai.Rules.md` (CAIR-R01..R16) | 2026-09-30 |
 
 ## Rules For This Layer
 

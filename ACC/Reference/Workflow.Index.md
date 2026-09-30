@@ -46,6 +46,7 @@ Workflow(
 | 2 | [`prajwalsamsonck/AI-Pentest-Agent`](https://github.com/prajwalsamsonck/AI-Pentest-Agent) | `ACC/Reference/Upstream.AiPentestAgent.Rules.md` (AIPA-R01..R16) | `Knowledge/AiPentestAgent/Study.md` | 2026-09-30 |
 | 3 | [`BasiPT/PentestGPT`](https://github.com/BasiPT/PentestGPT) | `ACC/Reference/Upstream.PentestGpt.Rules.md` (PGPT-R01..R18) | `Knowledge/PentestGpt/Study.md` | 2026-09-30 |
 | 4 | [`JailbreakBench/jailbreakbench`](https://github.com/JailbreakBench/jailbreakbench) | `ACC/Reference/Upstream.JailbreakBench.Rules.md` (JBB-R01..R19) | `Knowledge/JailbreakBench/Study.md` | 2026-09-30 |
+| 5 | [`aliasrobotics/cai`](https://github.com/aliasrobotics/cai) | `ACC/Reference/Upstream.Cai.Rules.md` (CAIR-R01..R16) | `Knowledge/Cai/Study.md` | 2026-09-30 |
 
 ## 4) Maintenance Rules
 
