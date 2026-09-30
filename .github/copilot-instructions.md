@@ -14,6 +14,9 @@
    - `Manifest.md` — manifest interpretation rules
    - `Workflow.Index.md` — workflow registry
    - `Upstream.LlmAttacks.Rules.md` — extracted rules (LLMA-R01..R20)
+   - `Upstream.AiPentestAgent.Rules.md` — extracted rules (AIPA-R01..R16)
+   - `Upstream.PentestGpt.Rules.md` — extracted rules (PGPT-R01..R18)
+   - `Upstream.JailbreakBench.Rules.md` — extracted rules (JBB-R01..R19)
 4. **Load `Knowledge/` only on demand** when a task cites a study.
 5. **Resident agent:** [`agents/RuleSmith.agent.md`](agents/RuleSmith.agent.md) — select **RuleSmith** in the agent picker for repo studies, rule extraction, and rule audits.
 

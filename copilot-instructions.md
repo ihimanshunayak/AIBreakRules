@@ -17,7 +17,8 @@ No jugaad. No skeleton. No shortcuts. Incomplete work is worse than slow work.
 1. **Read** `manifest.json` — SSOT for identity, language, paths, approvals.
 2. **Apply language** from `Developer.Language` (default: `Hinglish`).
 3. **Load rules layer** — `ACC/copilot-instructions.md`, then every file in `ACC/Reference/` in this order:
-   `Safety.md` → `Output.md` → `Manifest.md` → `Workflow.Index.md` → `Upstream.LlmAttacks.Rules.md`
+   `Safety.md` → `Output.md` → `Manifest.md` → `Workflow.Index.md` → `Upstream.LlmAttacks.Rules.md` →
+   `Upstream.AiPentestAgent.Rules.md` → `Upstream.PentestGpt.Rules.md` → `Upstream.JailbreakBench.Rules.md`
 4. **Load knowledge only when referenced** — `Knowledge/**` is on-demand, never always-on.
 
 If any required rules file is missing or cannot be read to EOF → fail-fast (`AIBR_ERR_SSOT_MISSING` / `AIBR_ERR_SSOT_INCOMPLETE_READ`).

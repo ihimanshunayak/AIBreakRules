@@ -31,6 +31,9 @@ root bootstrap → manifest → ACC (shared rules layer) → workflows → knowl
 | Upstream | What it is | Rules extracted | Full study |
 |---|---|---|---|
 | [`llm-attacks/llm-attacks`](https://github.com/llm-attacks/llm-attacks) (CMU) | Adversarial-attack research on aligned LLMs (GCG) | [`ACC/Reference/Upstream.LlmAttacks.Rules.md`](ACC/Reference/Upstream.LlmAttacks.Rules.md) | [`Knowledge/LlmAttacks/Study.md`](Knowledge/LlmAttacks/Study.md) |
+| [`prajwalsamsonck/AI-Pentest-Agent`](https://github.com/prajwalsamsonck/AI-Pentest-Agent) | LLM-assisted orchestration framework for authorized web-security assessments | [`ACC/Reference/Upstream.AiPentestAgent.Rules.md`](ACC/Reference/Upstream.AiPentestAgent.Rules.md) | [`Knowledge/AiPentestAgent/Study.md`](Knowledge/AiPentestAgent/Study.md) |
+| [`BasiPT/PentestGPT`](https://github.com/BasiPT/PentestGPT) | LLM pentest-guidance research prototype (USENIX Security 2024) | [`ACC/Reference/Upstream.PentestGpt.Rules.md`](ACC/Reference/Upstream.PentestGpt.Rules.md) | [`Knowledge/PentestGpt/Study.md`](Knowledge/PentestGpt/Study.md) |
+| [`JailbreakBench/jailbreakbench`](https://github.com/JailbreakBench/jailbreakbench) | Open robustness benchmark for LLM jailbreaks (NeurIPS 2024 D&B) | [`ACC/Reference/Upstream.JailbreakBench.Rules.md`](ACC/Reference/Upstream.JailbreakBench.Rules.md) | [`Knowledge/JailbreakBench/Study.md`](Knowledge/JailbreakBench/Study.md) |
 
 > **Responsible-use notice.** Upstream *security/adversarial* research is studied here for **defensive and
 > educational purposes only** — to derive engineering, evaluation, and safety **rules**. This repository must
@@ -57,7 +60,10 @@ AIBreakRules/
 │   │   ├── Output.md             ← Output quality standard
 │   │   ├── Manifest.md           ← How to read manifest.json
 │   │   ├── Workflow.Index.md     ← Workflow registry
-│   │   └── Upstream.LlmAttacks.Rules.md ← Rules extracted from llm-attacks
+│   │   ├── Upstream.LlmAttacks.Rules.md ← Rules extracted from llm-attacks (LLMA-R01..R20)
+│   │   ├── Upstream.AiPentestAgent.Rules.md ← Rules extracted from AI-Pentest-Agent (AIPA-R01..R16)
+│   │   ├── Upstream.PentestGpt.Rules.md ← Rules extracted from PentestGPT (PGPT-R01..R18)
+│   │   └── Upstream.JailbreakBench.Rules.md ← Rules extracted from JailbreakBench (JBB-R01..R19)
 │   ├── Workflow/                 ← Repeatable workflows (4-file pattern)
 │   │   ├── _Index.md
 │   │   └── Study/RepoStudy.md    ← Study a repo & extract rules
@@ -66,7 +72,10 @@ AIBreakRules/
 │
 └── Knowledge/                    ← Long-form study material (on-demand)
     ├── _Index.md
-    └── LlmAttacks/Study.md       ← Full study of the llm-attacks repo
+    ├── LlmAttacks/Study.md       ← Full study of the llm-attacks repo
+    ├── AiPentestAgent/Study.md   ← Full study of the AI-Pentest-Agent repo
+    ├── PentestGpt/Study.md       ← Full study of the PentestGPT repo
+    └── JailbreakBench/Study.md   ← Full study of the JailbreakBench repo
 ```
 
 ## 5) How To Use
@@ -129,8 +138,11 @@ Rules are numbered `<DOMAIN>-R<NN>`:
 | `SAFE-R` | Safety rules | `ACC/Reference/Safety.md` |
 | `OUT-R` | Output rules | `ACC/Reference/Output.md` |
 | `LLMA-R` | Rules extracted from llm-attacks | `ACC/Reference/Upstream.LlmAttacks.Rules.md` |
+| `AIPA-R` | Rules extracted from AI-Pentest-Agent | `ACC/Reference/Upstream.AiPentestAgent.Rules.md` |
+| `PGPT-R` | Rules extracted from PentestGPT | `ACC/Reference/Upstream.PentestGpt.Rules.md` |
+| `JBB-R` | Rules extracted from JailbreakBench | `ACC/Reference/Upstream.JailbreakBench.Rules.md` |
 
 ## 8) License
 
 MIT — see [`LICENSE`](LICENSE). Upstream study content retains upstream attribution
-(llm-attacks © 2023 Andy Zou, MIT license).
+(llm-attacks © 2023 Andy Zou, MIT; PentestGPT © the PentestGPT authors, MIT; JailbreakBench © 2024 JailbreakBench, MIT; AI-Pentest-Agent has no repository-level license — see its rules file attribution note).

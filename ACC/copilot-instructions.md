@@ -15,7 +15,10 @@ ACC/
 │   ├── Output.md               ← output quality standard (OUT-R*)
 │   ├── Manifest.md             ← how to read manifest.json
 │   ├── Workflow.Index.md       ← registry of all workflows
-│   └── Upstream.LlmAttacks.Rules.md ← rules extracted from external repos (LLMA-R*)
+│   ├── Upstream.LlmAttacks.Rules.md ← rules extracted from external repos (LLMA-R*)
+│   ├── Upstream.AiPentestAgent.Rules.md ← (AIPA-R*)
+│   ├── Upstream.PentestGpt.Rules.md ← (PGPT-R*)
+│   └── Upstream.JailbreakBench.Rules.md ← (JBB-R*)
 ├── Workflow/                   ← Repeatable processes (4-file pattern)
 │   ├── _Index.md
 │   └── Study/
@@ -49,6 +52,9 @@ ACC/
 3. `Reference/Manifest.md` — runtime config interpretation.
 4. `Reference/Workflow.Index.md` — what processes exist.
 5. `Reference/Upstream.LlmAttacks.Rules.md` — extracted upstream rules.
+6. `Reference/Upstream.AiPentestAgent.Rules.md` — extracted upstream rules.
+7. `Reference/Upstream.PentestGpt.Rules.md` — extracted upstream rules.
+8. `Reference/Upstream.JailbreakBench.Rules.md` — extracted upstream rules.
 
 ## 5) Rule ID Convention
 
@@ -59,6 +65,9 @@ Every rule has a stable ID `<DOMAIN>-R<NN>`. IDs are **never reused**; deprecate
 | `SAFE-R` | `Reference/Safety.md` | Safety, safety-gates, responsible AI |
 | `OUT-R` | `Reference/Output.md` | Artifact quality and structure |
 | `LLMA-R` | `Reference/Upstream.LlmAttacks.Rules.md` | Rules extracted from llm-attacks study |
+| `AIPA-R` | `Reference/Upstream.AiPentestAgent.Rules.md` | Rules extracted from AI-Pentest-Agent study |
+| `PGPT-R` | `Reference/Upstream.PentestGpt.Rules.md` | Rules extracted from PentestGPT study |
+| `JBB-R` | `Reference/Upstream.JailbreakBench.Rules.md` | Rules extracted from JailbreakBench study |
 
 ## 6) Maintenance Rules
 
