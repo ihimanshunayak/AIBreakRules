@@ -1,0 +1,54 @@
+{
+  "$schema": "./ACC/Reference/Manifest.md",
+  "SchemaVersion": "1.0.0",
+  "Repo": "AIBreakRules",
+  "RepoVersion": "1.0.0",
+  "LastUpdated": "2026-09-30",
+
+  "Developer": {
+    "Name": "Himanshu Nayak",
+    "Username": "ihimanshunayak",
+    "Email": "ihimanshunayak@gmail.com",
+    "Language": "Hinglish"
+  },
+
+  "Paths": {
+    "RepoRoot": ".",
+    "Rules": "./ACC/Reference",
+    "Workflows": "./ACC/Workflow",
+    "Templates": "./ACC/Template",
+    "Schemas": "./ACC/Schema",
+    "Knowledge": "./Knowledge"
+  },
+
+  "Approvals": {
+    "ApprovalMode": "manual",
+    "RequireApprovalFor": {
+      "DestructiveDelete": true,
+      "ForcePush": true,
+      "SecretChange": true,
+      "RuleDeletion": true
+    }
+  },
+
+  "Quality": {
+    "QualityOverSpeed": true,
+    "NoSkeleton": true,
+    "NoJugaad": true,
+    "FailFastOnMissingSSOT": true
+  },
+
+  "ResponsibleAI": {
+    "DefensiveOnly": true,
+    "NoOperationalAttackTooling": true,
+    "NoHarmfulDatasets": true,
+    "CitationRequired": true
+  },
+
+  "Notes": [
+    "This manifest is the SSOT for repository runtime behavior.",
+    "Language default is Hinglish; switch by changing Developer.Language.",
+    "Rules live in ACC/Reference — one rule, one home.",
+    "ApprovalMode=manual means risky actions stop and wait for explicit human approval."
+  ]
+}

@@ -1,0 +1,36 @@
+# === Secrets — NEVER commit ===
+.env
+.env.*
+*.env
+_secrets*
+*.pem
+*.key
+credentials.json
+
+# === OS junk ===
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# === Editors ===
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# === Node ===
+node_modules/
+npm-debug.log*
+
+# === Logs / temp ===
+*.log
+tmp/
+temp/
+.temp/
