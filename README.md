@@ -46,7 +46,9 @@ AIBreakRules/
 ├── LICENSE                       ← MIT
 ├── .gitignore
 ├── .github/
-│   └── copilot-instructions.md   ← Copilot integration pointer → root bootstrap
+│   ├── copilot-instructions.md   ← Copilot integration pointer → root bootstrap
+│   └── agents/
+│       └── RuleSmith.agent.md    ← Resident agent: repo study + rule extraction + audit
 │
 ├── ACC/                          ← Shared rules layer (AI Control Core)
 │   ├── copilot-instructions.md   ← ACC bootstrap delta
@@ -91,7 +93,34 @@ AIBreakRules/
 2. Outputs: `Knowledge/<Topic>/Study.md` + `ACC/Reference/Upstream.<Name>.Rules.md`.
 3. Register the study in this README's table + `ACC/Reference/Workflow.Index.md`.
 
-## 6) Rule Numbering
+## 6) Agents
+
+| Agent | File | Purpose |
+|---|---|---|
+| **RuleSmith** | `.github/agents/RuleSmith.agent.md` | Resident AIBreakRules guardian — studies repositories, extracts evidence-backed rules (full anatomy), audits rule domains, writes Knowledge study docs, and enforces the defensive scope gate. |
+
+**RuleSmith feature set (F1–F10):**
+
+| # | Feature |
+|---|---|
+| F1 | Repo Study — structured recon → candidate rules (runs `RepoStudy` end-to-end) |
+| F2 | Evidence-backed extraction — every rule carries ID/Statement/Evidence/Why/Applied |
+| F3 | Rule authoring — add to domains or create `Upstream.<Name>.Rules.md`; stable IDs |
+| F4 | Rule audit — ID sequence, evidence integrity, one-home-per-rule, attribution, scope |
+| F5 | Knowledge study docs — structure maps, methodology, reproducibility, citations |
+| F6 | Scope gate — defensive/educational only (`SAFE-R08`) |
+| F7 | Registration & indexing — README/workflow/index updates on every change |
+| F8 | Attribution & license discipline — notices, BibTeX, summary-over-paste |
+| F9 | Git discipline — format, one-change-per-commit, no force-push |
+| F10 | Language & output discipline — Hinglish default, complete artifacts only |
+
+**Usage:** in VS Code chat, select **RuleSmith** from the agent picker, then e.g.
+
+- `Study https://github.com/<org>/<repo> — topic <Topic>, prefix <PREFIX>-R`
+- `Add rule to Safety.md: <lesson>`
+- `Audit LLMA-R* — check IDs, evidence, duplicates`
+
+## 7) Rule Numbering
 
 Rules are numbered `<DOMAIN>-R<NN>`:
 
@@ -101,7 +130,7 @@ Rules are numbered `<DOMAIN>-R<NN>`:
 | `OUT-R` | Output rules | `ACC/Reference/Output.md` |
 | `LLMA-R` | Rules extracted from llm-attacks | `ACC/Reference/Upstream.LlmAttacks.Rules.md` |
 
-## 7) License
+## 8) License
 
 MIT — see [`LICENSE`](LICENSE). Upstream study content retains upstream attribution
 (llm-attacks © 2023 Andy Zou, MIT license).

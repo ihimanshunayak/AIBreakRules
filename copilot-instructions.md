@@ -44,6 +44,9 @@ If any required rules file is missing or cannot be read to EOF → fail-fast (`A
 | A repeatable process | `ACC/Workflow/<Domain>/` (4-file pattern) | `ACC/Template/Workflow.Template.md` |
 | Long-form study / notes | `Knowledge/<Topic>/` | — |
 | New rule domain | new file in `ACC/Reference/` + register in §1 boot list | — |
+| A custom agent | `.github/agents/<Name>.agent.md` | — |
+
+**Resident agent:** select **RuleSmith** (`.github/agents/RuleSmith.agent.md`) in the VS Code agent picker for repo studies, rule extraction, rule audits, and Knowledge study docs.
 
 ---
 

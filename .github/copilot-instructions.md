@@ -15,6 +15,7 @@
    - `Workflow.Index.md` — workflow registry
    - `Upstream.LlmAttacks.Rules.md` — extracted rules (LLMA-R01..R20)
 4. **Load `Knowledge/` only on demand** when a task cites a study.
+5. **Resident agent:** [`agents/RuleSmith.agent.md`](agents/RuleSmith.agent.md) — select **RuleSmith** in the agent picker for repo studies, rule extraction, and rule audits.
 
 ## Key Constraints (short form — full text in `ACC/Reference/Safety.md`)
 
