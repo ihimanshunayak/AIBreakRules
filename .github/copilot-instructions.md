@@ -17,8 +17,9 @@
    - `Upstream.AiPentestAgent.Rules.md` — extracted rules (AIPA-R01..R16)
    - `Upstream.PentestGpt.Rules.md` — extracted rules (PGPT-R01..R18)
    - `Upstream.JailbreakBench.Rules.md` — extracted rules (JBB-R01..R19)
+   - `Upstream.Cai.Rules.md` — extracted rules (CAIR-R01..R16)
 4. **Load `Knowledge/` only on demand** when a task cites a study.
-5. **Resident agent:** [`agents/RuleSmith.agent.md`](agents/RuleSmith.agent.md) — select **RuleSmith** in the agent picker for repo studies, rule extraction, and rule audits.
+5. **Resident agents:** [`agents/RuleSmith.agent.md`](agents/RuleSmith.agent.md) — repo studies, rule extraction, rule audits. [`agents/CyberSecurityEngineer.agent.md`](agents/CyberSecurityEngineer.agent.md) — cybersecurity engineering, security review, authorized testing. Docs: [`../docs/`](../docs/).
 
 ## Key Constraints (short form — full text in `ACC/Reference/Safety.md`)
 

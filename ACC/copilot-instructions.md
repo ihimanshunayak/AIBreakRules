@@ -18,7 +18,8 @@ ACC/
 │   ├── Upstream.LlmAttacks.Rules.md ← rules extracted from external repos (LLMA-R*)
 │   ├── Upstream.AiPentestAgent.Rules.md ← (AIPA-R*)
 │   ├── Upstream.PentestGpt.Rules.md ← (PGPT-R*)
-│   └── Upstream.JailbreakBench.Rules.md ← (JBB-R*)
+│   ├── Upstream.JailbreakBench.Rules.md ← (JBB-R*)
+│   └── Upstream.Cai.Rules.md ← (CAIR-R*)
 ├── Workflow/                   ← Repeatable processes (4-file pattern)
 │   ├── _Index.md
 │   └── Study/
@@ -55,6 +56,7 @@ ACC/
 6. `Reference/Upstream.AiPentestAgent.Rules.md` — extracted upstream rules.
 7. `Reference/Upstream.PentestGpt.Rules.md` — extracted upstream rules.
 8. `Reference/Upstream.JailbreakBench.Rules.md` — extracted upstream rules.
+9. `Reference/Upstream.Cai.Rules.md` — extracted upstream rules.
 
 ## 5) Rule ID Convention
 
@@ -68,6 +70,7 @@ Every rule has a stable ID `<DOMAIN>-R<NN>`. IDs are **never reused**; deprecate
 | `AIPA-R` | `Reference/Upstream.AiPentestAgent.Rules.md` | Rules extracted from AI-Pentest-Agent study |
 | `PGPT-R` | `Reference/Upstream.PentestGpt.Rules.md` | Rules extracted from PentestGPT study |
 | `JBB-R` | `Reference/Upstream.JailbreakBench.Rules.md` | Rules extracted from JailbreakBench study |
+| `CAIR-R` | `Reference/Upstream.Cai.Rules.md` | Rules extracted from CAI (Cybersecurity AI) study |
 
 ## 6) Maintenance Rules
 

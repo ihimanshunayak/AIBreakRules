@@ -34,6 +34,7 @@ root bootstrap → manifest → ACC (shared rules layer) → workflows → knowl
 | [`prajwalsamsonck/AI-Pentest-Agent`](https://github.com/prajwalsamsonck/AI-Pentest-Agent) | LLM-assisted orchestration framework for authorized web-security assessments | [`ACC/Reference/Upstream.AiPentestAgent.Rules.md`](ACC/Reference/Upstream.AiPentestAgent.Rules.md) | [`Knowledge/AiPentestAgent/Study.md`](Knowledge/AiPentestAgent/Study.md) |
 | [`BasiPT/PentestGPT`](https://github.com/BasiPT/PentestGPT) | LLM pentest-guidance research prototype (USENIX Security 2024) | [`ACC/Reference/Upstream.PentestGpt.Rules.md`](ACC/Reference/Upstream.PentestGpt.Rules.md) | [`Knowledge/PentestGpt/Study.md`](Knowledge/PentestGpt/Study.md) |
 | [`JailbreakBench/jailbreakbench`](https://github.com/JailbreakBench/jailbreakbench) | Open robustness benchmark for LLM jailbreaks (NeurIPS 2024 D&B) | [`ACC/Reference/Upstream.JailbreakBench.Rules.md`](ACC/Reference/Upstream.JailbreakBench.Rules.md) | [`Knowledge/JailbreakBench/Study.md`](Knowledge/JailbreakBench/Study.md) |
+| [`aliasrobotics/cai`](https://github.com/aliasrobotics/cai) | Cybersecurity AI (CAI) — open agentic-security framework (archived research artifact; MIT + research-only additions) | [`ACC/Reference/Upstream.Cai.Rules.md`](ACC/Reference/Upstream.Cai.Rules.md) | [`Knowledge/Cai/Study.md`](Knowledge/Cai/Study.md) |
 
 > **Responsible-use notice.** Upstream *security/adversarial* research is studied here for **defensive and
 > educational purposes only** — to derive engineering, evaluation, and safety **rules**. This repository must
@@ -51,7 +52,16 @@ AIBreakRules/
 ├── .github/
 │   ├── copilot-instructions.md   ← Copilot integration pointer → root bootstrap
 │   └── agents/
-│       └── RuleSmith.agent.md    ← Resident agent: repo study + rule extraction + audit
+│       ├── RuleSmith.agent.md    ← Resident agent: repo study + rule extraction + audit
+│       └── CyberSecurityEngineer.agent.md ← Specialist agent: cybersecurity engineering / authorized security work
+│
+├── docs/                         ← Agent + system documentation
+│   ├── architecture.md           ← CyberSecurityEngineer system architecture
+│   ├── agent-behavior.md         ← Behavioral contract
+│   ├── workflows.md              ← 12 specialist workflows
+│   ├── security-model.md         ← Threat model + trust boundaries
+│   ├── upstream-research.md      ← Study ledger + adoption ledger
+│   └── testing.md                ← Scenario test suite
 │
 ├── ACC/                          ← Shared rules layer (AI Control Core)
 │   ├── copilot-instructions.md   ← ACC bootstrap delta
@@ -63,7 +73,8 @@ AIBreakRules/
 │   │   ├── Upstream.LlmAttacks.Rules.md ← Rules extracted from llm-attacks (LLMA-R01..R20)
 │   │   ├── Upstream.AiPentestAgent.Rules.md ← Rules extracted from AI-Pentest-Agent (AIPA-R01..R16)
 │   │   ├── Upstream.PentestGpt.Rules.md ← Rules extracted from PentestGPT (PGPT-R01..R18)
-│   │   └── Upstream.JailbreakBench.Rules.md ← Rules extracted from JailbreakBench (JBB-R01..R19)
+│   │   ├── Upstream.JailbreakBench.Rules.md ← Rules extracted from JailbreakBench (JBB-R01..R19)
+│   │   └── Upstream.Cai.Rules.md ← Rules extracted from CAI (CAIR-R01..R16)
 │   ├── Workflow/                 ← Repeatable workflows (4-file pattern)
 │   │   ├── _Index.md
 │   │   └── Study/RepoStudy.md    ← Study a repo & extract rules
@@ -75,7 +86,8 @@ AIBreakRules/
     ├── LlmAttacks/Study.md       ← Full study of the llm-attacks repo
     ├── AiPentestAgent/Study.md   ← Full study of the AI-Pentest-Agent repo
     ├── PentestGpt/Study.md       ← Full study of the PentestGPT repo
-    └── JailbreakBench/Study.md   ← Full study of the JailbreakBench repo
+    ├── JailbreakBench/Study.md   ← Full study of the JailbreakBench repo
+    └── Cai/Study.md              ← Full study of the CAI repo
 ```
 
 ## 5) How To Use
@@ -107,6 +119,7 @@ AIBreakRules/
 | Agent | File | Purpose |
 |---|---|---|
 | **RuleSmith** | `.github/agents/RuleSmith.agent.md` | Resident AIBreakRules guardian — studies repositories, extracts evidence-backed rules (full anatomy), audits rule domains, writes Knowledge study docs, and enforces the defensive scope gate. |
+| **CyberSecurityEngineer** | `.github/agents/CyberSecurityEngineer.agent.md` | Cybersecurity engineering specialist — secure coding, security review, vulnerability analysis, web/API/cloud review, threat modeling, security automation, CTF/lab assistance; scope-gated (C0–C5), evidence-labeled, model-agnostic. Docs: [`docs/`](docs/). |
 
 **RuleSmith feature set (F1–F10):**
 
@@ -129,6 +142,16 @@ AIBreakRules/
 - `Add rule to Safety.md: <lesson>`
 - `Audit LLMA-R* — check IDs, evidence, duplicates`
 
+Select **CyberSecurityEngineer** for security engineering work, then e.g.
+
+- `Review src/auth/ for authorization problems`
+- `Patch this SQL injection vulnerability in api/users.php`
+- `Threat model the new payment flow`
+- `Audit package-lock.json for vulnerable dependencies`
+- `Help me understand this local CTF challenge`
+
+Agent docs: [`docs/architecture.md`](docs/architecture.md) · [`docs/agent-behavior.md`](docs/agent-behavior.md) · [`docs/workflows.md`](docs/workflows.md) · [`docs/security-model.md`](docs/security-model.md) · [`docs/upstream-research.md`](docs/upstream-research.md) · [`docs/testing.md`](docs/testing.md)
+
 ## 7) Rule Numbering
 
 Rules are numbered `<DOMAIN>-R<NN>`:
@@ -141,8 +164,9 @@ Rules are numbered `<DOMAIN>-R<NN>`:
 | `AIPA-R` | Rules extracted from AI-Pentest-Agent | `ACC/Reference/Upstream.AiPentestAgent.Rules.md` |
 | `PGPT-R` | Rules extracted from PentestGPT | `ACC/Reference/Upstream.PentestGpt.Rules.md` |
 | `JBB-R` | Rules extracted from JailbreakBench | `ACC/Reference/Upstream.JailbreakBench.Rules.md` |
+| `CAIR-R` | Rules extracted from CAI (Cybersecurity AI) | `ACC/Reference/Upstream.Cai.Rules.md` |
 
 ## 8) License
 
 MIT — see [`LICENSE`](LICENSE). Upstream study content retains upstream attribution
-(llm-attacks © 2023 Andy Zou, MIT; PentestGPT © the PentestGPT authors, MIT; JailbreakBench © 2024 JailbreakBench, MIT; AI-Pentest-Agent has no repository-level license — see its rules file attribution note).
+(llm-attacks © 2023 Andy Zou, MIT; PentestGPT © the PentestGPT authors, MIT; JailbreakBench © 2024 JailbreakBench, MIT; CAI © Alias Robotics — MIT components + research-only additions per its LICENSE/DISCLAIMER; AI-Pentest-Agent has no repository-level license — see its rules file attribution note).
